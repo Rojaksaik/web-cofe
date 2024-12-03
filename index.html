@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>KEDAI KOPI RUMAH</title>
+    <style>
+      @keyframes scrollKedai {
+        0% {
+          transform: translateX(50%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .kedai-berjalan {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .kedai-content {
+        display: inline-block;
+        padding-left: 50%;
+        animation: scrollKedai 10s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Menu -->
+    <nav class="bg-gray-900 text-white p-4 shadow">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex space-x-4">
+          <a href="#" class="text-xl font-bold">KEDAI KOPI RUMAH</a>
+        </div>
+        <!-- Tombol Hamburger (untuk layar kecil) -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <!-- Menu untuk layar besar -->
+        <div class="hidden md:flex space-x-4">
+          <a href="index.html" class="hover:bg-gray-700 px-3 py-2 rounded"
+            >Home</a
+          >
+          <a href="Tentangkami.html" class="hover:bg-gray-700 px-3 py-2 rounded"
+            >Tentang Kami</a
+          >
+          <a href="menu.html" class="hover:bg-gray-700 px-3 py-2 rounded"
+            >Menu</a
+          >
+          <a href="kontak.html" class="hover:bg-gray-700 px-3 py-2 rounded"
+            >Kontak</a
+          >
+        </div>
+      </div>
+      <!-- Menu untuk layar kecil -->
+      <div id="mobile-menu" class="hidden flex-col p-4 bg-gray-900 md:hidden">
+        <a href="#" class="block py-2">Home</a>
+        <a href="tentangkami.html" class="block py-2">Tentang Kami</a>
+        <a href="menu.html" class="block py-2">Menu</a>
+        <a href="kontak.html" class="block py-2">Kontak</a>
+      </div>
+    </nav>
+
+    <!-- Kedai Kopi Berjalan -->
+    <div class="bg-yellow-500 text-white py-4 overflow-hidden">
+      <div class="kedai-berjalan">
+        <div class="kedai-content text-3xl font-bold space-x-8">
+          <span>Kedai Kopi Rumah - Kopi Nikmat dengan Cita Rasa Khas!</span>
+          <span>Kunjungi Tempat Kami!</span>
+          <span>Promo Hari Ini: Beli 2 Gratis 1!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Konten lain -->
+    <section
+      class="relative bg-[url('https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')] bg-cover bg-center bg-no-repeat h-screen"
+    >
+      <div class="absolute inset-0 bg-black/70"></div>
+
+      <div
+        class="relative z-10 mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+      >
+        <div class="max-w-xl text-center sm:text-left">
+          <h1 class="text-4xl font-extrabold text-white sm:text-6xl">
+            Selamat Menikmati
+            <strong class="block font-extrabold text-yellow-400 mt-2">
+              Kopi Seduh Rumah
+            </strong>
+          </h1>
+
+          <p class="mt-6 max-w-lg text-lg text-gray-300 sm:text-xl">
+            Cobalah nikmatnya kopi khas kami, berbeda dari yang lain dengan cita
+            rasa yang tak terlupakan.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4 text-center">
+            <a
+              href="belanjasekarang.html"
+              class="block w-full rounded bg-yellow-500 px-12 py-3 text-sm font-medium text-black shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-yellow-700 sm:w-auto"
+              >Belanja Sekarang</a
+            >
+            <a
+              href="Admincat.html"
+              class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-yellow-600 shadow hover:text-yellow-700 focus:outline-none focus:ring active:text-yellow-500 sm:w-auto"
+              >Hubungi Admin</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Makanan dan Minuman -->
+    <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">
+          Menu Makanan & Minuman
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Minuman -->
+          <div class="border p-6 rounded-lg shadow-lg bg-gray-50">
+            <h3 class="text-xl font-bold mb-4">Kopi Hitam</h3>
+            <p class="text-gray-700 mb-2">Kopi murni dengan rasa pahit khas</p>
+            <span class="text-gray-900 font-semibold">Rp 15.000</span>
+          </div>
+          <div class="border p-6 rounded-lg shadow-lg bg-gray-50">
+            <h3 class="text-xl font-bold mb-4">Latte</h3>
+            <p class="text-gray-700 mb-2">Kopi susu dengan rasa lembut</p>
+            <span class="text-gray-900 font-semibold">Rp 25.000</span>
+          </div>
+          <div class="border p-6 rounded-lg shadow-lg bg-gray-50">
+            <h3 class="text-xl font-bold mb-4">Cappuccino</h3>
+            <p class="text-gray-700 mb-2">Kopi dengan campuran susu dan foam</p>
+            <span class="text-gray-900 font-semibold">Rp 27.000</span>
+          </div>
+          <!-- Makanan -->
+          <div class="border p-6 rounded-lg shadow-lg bg-gray-50">
+            <h3 class="text-xl font-bold mb-4">Roti Bakar Coklat</h3>
+            <p class="text-gray-700 mb-2">Roti panggang dengan isian coklat</p>
+            <span class="text-gray-900 font-semibold">Rp 20.000</span>
+          </div>
+          <div class="border p-6 rounded-lg shadow-lg bg-gray-50">
+            <h3 class="text-xl font-bold mb-4">Pisang Goreng</h3>
+            <p class="text-gray-700 mb-2">
+              Pisang goreng hangat dengan taburan gula
+            </p>
+            <span class="text-gray-900 font-semibold">Rp 18.000</span>
+          </div>
+          <div class="border p-6 rounded-lg shadow-lg bg-gray-50">
+            <h3 class="text-xl font-bold mb-4">Indomie Rebus Spesial</h3>
+            <p class="text-gray-700 mb-2">
+              Indomie rebus dengan telur dan sayuran
+            </p>
+            <span class="text-gray-900 font-semibold">Rp 22.000</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grafik Pasar -->
+    <section class="bg-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">
+          Grafik Harga Pasar
+        </h2>
+        <div class="chart-container">
+          <canvas id="marketChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // JavaScript untuk mengatur tombol hamburger
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Inisialisasi grafik Chart.js
+      const ctx = document.getElementById("marketChart").getContext("2d");
+      const marketChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              label: "Harga Pasar",
+              data: [
+                120, 130, 115, 140, 150, 160, 155, 165, 170, 175, 180, 190,
+              ],
+              backgroundColor: "rgba(255, 206, 86, 0.2)",
+              borderColor: "rgba(255, 206, 86, 1)",
+              borderWidth: 2,
+              fill: true,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return `Harga: Rp ${context.raw}`;
+                },
+              },
+            },
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: "Bulan",
+              },
+            },
+            y: {
+              title: {
+                display: true,
+                text: "Harga (Rp)",
+              },
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      // Update grafik secara berkala dengan data baru
+      function updateChartData() {
+        const newData = [
+          125, 135, 120, 145, 155, 165, 160, 170, 175, 180, 185, 195,
+        ]; // Data harga baru yang diperbarui
+        marketChart.data.datasets[0].data = newData;
+        marketChart.update();
+      }
+
+      // Update data setiap 5 detik
+      setInterval(updateChartData, 5000);
+    </script>
+  </body>
+</html>
